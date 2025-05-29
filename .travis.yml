@@ -4,7 +4,7 @@ services:
 
 before_install:
   - gem update --system
-  - gem 'nokogiri', '1.10.10'
+  - gem install nokogiri -v 1.10.10
   - docker build -t docker-react-test -f Dockerfile.dev .
 
 script:
