@@ -9,7 +9,7 @@ before_install:
   - docker build -t docker-react-test -f Dockerfile .
 
 script:
-  - docker run -e CI=true docker-react-test
+  - docker run -d -e CI=true docker-react-test
 
 language: generic
 
