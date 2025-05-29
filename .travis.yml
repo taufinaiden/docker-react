@@ -6,7 +6,7 @@ before_install:
   - gem install nokogiri --platform=ruby
   - gem install bundler
   - bundle config set force_ruby_platform true
-  - docker build -t docker-react-test -f Dockerfile.dev .
+  - docker build -t docker-react-test -f Dockerfile .
 
 script:
   - docker run -e CI=true docker-react-test npm run test
