@@ -4,8 +4,7 @@ services:
 
 before_install:
   - gem update --system
-  - bundle config set force_ruby_platform true
-  - bundle install
+  - gem 'nokogiri', '1.10.10'
   - docker build -t docker-react-test -f Dockerfile.dev .
 
 script:
